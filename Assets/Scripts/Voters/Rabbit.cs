@@ -1,6 +1,6 @@
-﻿namespace Assets.Scripts.Respondents
+﻿namespace Assets.Scripts.Voters
 {
-	internal class Rabbit : Respondent
+	internal class Rabbit : Voter
 	{
 		public override string Name => "Rabbit";
 

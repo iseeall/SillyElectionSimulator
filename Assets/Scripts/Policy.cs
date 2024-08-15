@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.Respondents;
+﻿using Assets.Scripts.Voters;
 
 namespace Assets.Scripts
 {

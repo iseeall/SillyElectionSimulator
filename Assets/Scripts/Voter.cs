@@ -1,8 +1,6 @@
-using UnityEngine;
-
 namespace Assets.Scripts
 {
-	internal abstract class Respondent : MonoBehaviour
+	internal abstract class Voter
 	{
 		public abstract string Name { get; }
 		public abstract string GetOpinion();
