@@ -18,6 +18,7 @@ internal class ScrollRectSensitivityFix : MonoBehaviour
 			case RuntimePlatform.OSXPlayer:
 			case RuntimePlatform.LinuxEditor:
 			case RuntimePlatform.LinuxPlayer:
+			case RuntimePlatform.WebGLPlayer:
 				this.scrollRect.scrollSensitivity = 50f;
 				break;
 			default:
