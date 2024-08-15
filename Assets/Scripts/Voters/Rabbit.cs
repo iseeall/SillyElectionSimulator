@@ -2,13 +2,17 @@
 {
 	internal class Rabbit : Voter
 	{
-		public override string Name => "Rabbit";
+		public override string Name => "Rabbits";
 
 		public override string GetOpinion() => "Wolves are evil and should be in jail. And we need more carrots!";
 
-		public override bool WouldSupportPolicy(Policy policy)
+		public Rabbit(int population)
+			: base(population)
 		{
-			return policy.EvaluateBenefitFor(this) > 0;
+		}
+		public override PolicyReaction GetReactionToPolicy(Policy policy)
+		{
+			return policy.GetReactionFor(this);
 		}
 	}
 }

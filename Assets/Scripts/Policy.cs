@@ -5,8 +5,8 @@ namespace Assets.Scripts
 	internal abstract class Policy
 	{
 		public abstract string Name { get; }
-		public abstract float EvaluateBenefitFor(Carrot carrot);
-		public abstract float EvaluateBenefitFor(Rabbit rabbit);
-		public abstract float EvaluateBenefitFor(Wolf wolf);
+		public abstract PolicyReaction GetReactionFor(Carrot carrot);
+		public abstract PolicyReaction GetReactionFor(Rabbit rabbit);
+		public abstract PolicyReaction GetReactionFor(Wolf wolf);
 	}
 }

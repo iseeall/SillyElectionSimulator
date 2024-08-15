@@ -4,9 +4,9 @@ namespace Assets.Scripts.Policies
 {
 	internal class KillAllRabbits : Policy
 	{
-		public override string Name => "Kill all rabbits!";
-		public override float EvaluateBenefitFor(Carrot carrot) => 1f;
-		public override float EvaluateBenefitFor(Rabbit rabbit) => -2f;
-		public override float EvaluateBenefitFor(Wolf wolf) => -1f;
+		public override string Name => "Kill all rabbits";
+		public override PolicyReaction GetReactionFor(Carrot carrot) => new() { Reaction = 1f, Explanation = "Freedom at last!" };
+		public override PolicyReaction GetReactionFor(Rabbit rabbit) => new() { Reaction = -2f, Explanation = "[attempting to assassinate you]" };
+		public override PolicyReaction GetReactionFor(Wolf wolf) => new() { Reaction = -1f, Explanation = "But we need rabbits for food!" };
 	}
 }

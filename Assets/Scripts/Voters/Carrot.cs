@@ -2,13 +2,17 @@
 {
 	internal class Carrot : Voter
 	{
-		public override string Name => "Carrot";
+		public override string Name => "Carrots";
 
-		public override string GetOpinion() => "Rabbits are evil! And since wolves will free us from the rabbits, we need more wolves.";
+		public override string GetOpinion() => "Rabbits are evil! Wolves will free us from the rabbits, so we need more wolves.";
 
-		public override bool WouldSupportPolicy(Policy policy)
+		public Carrot(int population)
+			: base(population)
 		{
-			return policy.EvaluateBenefitFor(this) > 0;
+		}
+		public override PolicyReaction GetReactionToPolicy(Policy policy)
+		{
+			return policy.GetReactionFor(this);
 		}
 	}
 }
